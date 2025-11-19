@@ -1,1 +1,52 @@
+:root {
+  --c1: #e9e7d8;
+  --c2: #c9c2b0;
+  --c3: #a9a38e;
+  --c4: #8c7a5f;
+  --c5: #5c523d;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--c1);
+  color: var(--c5);
+}
+
+header {
+  background-color: var(--c2);
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--c5);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--c3);
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--c5);
+  font-weight: bold;
+}
+
+.section {
+  padding: 2rem;
+  background-color: var(--c1);
+  border-bottom: 4px solid var(--c2);
+}
+
+.footer {
+  background-color: var(--c5);
+  color: var(--c1);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
 
