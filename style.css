@@ -178,5 +178,32 @@ nav a:hover {
   text-align: center;
   padding: 1.5rem;
   margin-top: 2rem;
+
+  /* ------------------------------ */
+/* CAT ICON BUTTON - Box Shape */
+/* ------------------------------ */
+
+.cat-icon-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cat-icon-link {
+  display: inline-block;
+}
+
+.cat-icon {
+  width: 120px; /* Set the width of the box */
+  height: 120px; /* Set the height of the box */
+  object-fit: cover; /* Ensures the image fills the box, maintaining aspect ratio */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  border: 4px solid var(--c2); /* Border color */
+  border-radius: 8px; /* Optional: rounds the corners of the box */
+}
+
+.cat-icon:hover {
+  transform: scale(1.1); /* Slightly enlarges the image when hovered */
+}
+
   font-size: 1.1rem;
 }
