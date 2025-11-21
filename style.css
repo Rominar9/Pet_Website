@@ -72,16 +72,14 @@ nav a:hover {
 }
 
 /* ------------------------------ */
-/* FLASHCARDS (Horizontal Layout) */
+/* FLASHCARDS (Vertical Layout) */
 /* ------------------------------ */
 
-.flashcards-horizontal {
-  display: flex;
-  justify-content: space-around;
+.flashcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   padding: 3rem;
-  overflow-x: scroll;
-  margin-bottom: 2rem;
 }
 
 .card {
@@ -91,7 +89,6 @@ nav a:hover {
   border-radius: 18px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  min-width: 260px;
   text-align: center;
 }
 
