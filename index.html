@@ -4,40 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <title>Adoptable Cats</title>
+       <link href="favicon.png" rel="icon" type="favicon">
+  <title>Kitty Shelter</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header class="top-header small">
-  <h1>Meet Our Cats</h1>
-</header>
+  <header>
+    <div class="logo-container">
+      <img src="favicon.png" alt="Kitty Shelter Logo" class="logo">
+      <h1>Kitty Shelter</h1>
+    </div>
+  </header>
 
-<main class="cat-gallery">
+  <nav>
+    <a href="#adopt">Adopt</a>
+    <a href="#care">Cat Care</a>
+    <a href="#about">About Us</a>
+    <a href="#donate">Donate</a>
+  </nav>
 
-  <div class="cat-card">
-    <img src="cat1.jpg" alt="Mittens">
-    <h3>Mittens</h3>
-    <p>2 years old • Gentle • Loves naps</p>
-  </div>
+  <section class="flashcards">
 
-  <div class="cat-card">
-    <img src="cat2.jpg" alt="Luna">
-    <h3>Luna</h3>
-    <p>1 year old • Playful • Great with families</p>
-  </div>
+    <div class="card" id="adopt">
+      <h2>Adoptable Cats</h2>
+      <p>Discover friendly cats looking for their forever home.</p>
+    </div>
 
-  <div class="cat-card">
-    <img src="cat3.jpg" alt="Oliver">
-    <h3>Oliver</h3>
-    <p>3 years old • Curious • Affectionate</p>
-  </div>
+    <div class="card" id="care">
+      <h2>Cat Care Tips</h2>
+      <p>Learn helpful tips to keep your feline happy and healthy.</p>
+    </div>
 
-  <!-- Add more cats as needed -->
+    <div class="card" id="about">
+      <h2>About Kitty Shelter</h2>
+      <p>We rescue, rehabilitate, and rehome cats in need.</p>
+    </div>
 
-</main>
+    <div class="card" id="donate">
+      <h2>Donate</h2>
+      <p>Your generosity helps us save more lives.</p>
+    </div>
 
-<footer class="footer">© 2025 Kitty Shelter</footer>
+  </section>
+
+  <footer class="footer">© 2025 Kitty Shelter</footer>
 
 </body>
 </html>
