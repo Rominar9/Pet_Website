@@ -1,4 +1,4 @@
-/* General reset for margin and padding */
+/* General reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +13,8 @@
   --c3: #a9a38e;
   --c4: #8c7a5f;
   --c5: #5c523d;
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 10px 22px rgba(0, 0, 0, 0.18);
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.12);
+  --shadow-hover: 0 10px 22px rgba(0,0,0,0.18);
 }
 
 /* ------------------------------ */
@@ -33,12 +33,12 @@ h1, h2 {
 
 p {
   font-size: 1.1rem;
-  color: var(--c5);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* ------------------------------ */
-/* HEADER */
+/* Header */
 header {
   background-color: var(--c2);
   padding: 2.5rem 1rem;
@@ -121,11 +121,6 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-.card p {
-  margin-bottom: 1.5rem;
-}
-
-/* Card Lists (for Contact & Cat Care Tips) */
 .card ul {
   list-style-type: none;
   padding-left: 0;
@@ -169,3 +164,28 @@ nav a:hover {
 .footer {
   background-color: var(--c5);
   color: var(--c1);
+  text-align: center; /* center the text */
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* ------------------------------ */
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--c4);
+  color: var(--c1);
+  padding: 12px 18px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+}
