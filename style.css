@@ -1,27 +1,35 @@
+/* -------------------------------------- */
+/* COLOR PALETTE */
+/* -------------------------------------- */
 :root {
-  --c1: #e9e7d8;
-  --c2: #c9c2b0;
-  --c3: #a9a38e;
-  --c4: #8c7a5f;
-  --c5: #5c523d;
+  --c1: #f7f6f2;
+  --c2: #d4cfc3;
+  --c3: #b5ad9b;
+  --c4: #8a7a62;
+  --c5: #564a38;
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   background-color: var(--c1);
   color: var(--c5);
+  line-height: 1.6;
 }
 
-/* ------------------------------ */
+/* -------------------------------------- */
 /* HEADER */
-/* ------------------------------ */
+/* -------------------------------------- */
 
 header {
-  background-color: var(--c2);
-  padding: 2rem;
+  background: linear-gradient(to bottom, var(--c2), var(--c3));
+  padding: 2.5rem 1rem;
+  border-bottom: 4px solid var(--c4);
   text-align: center;
-  border-bottom: 5px solid var(--c3);
+  box-shadow: var(--shadow-soft);
 }
 
 .logo-container {
@@ -32,178 +40,116 @@ header {
 }
 
 .logo {
-  width: 120px;
+  width: 110px;
   height: auto;
   border-radius: 50%;
   border: 4px solid var(--c4);
-  background-color: var(--c1);
   padding: 0.5rem;
+  background-color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.8rem;
-  font-weight: bold;
+  font-size: 3rem;
   color: var(--c5);
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
-/* ------------------------------ */
+/* -------------------------------------- */
 /* NAVIGATION */
-/* ------------------------------ */
+/* -------------------------------------- */
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
-  background-color: var(--c3);
+  gap: 3rem;
+  background-color: var(--c4);
   padding: 1rem;
+  box-shadow: var(--shadow-soft);
 }
 
 nav a {
   text-decoration: none;
-  color: var(--c5);
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+  color: var(--c1);
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: opacity 0.3s;
 }
 
 nav a:hover {
-  color: var(--c1);
+  opacity: 0.7;
 }
 
-/* ------------------------------ */
-/* FLASHCARDS (Vertical Layout) */
-/* ------------------------------ */
+/* -------------------------------------- */
+/* FLASHCARDS */
+/* -------------------------------------- */
 
 .flashcards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
 
 .card {
-  background-color: var(--c1);
-  border: 3px solid var(--c2);
+  background-color: white;
+  border: 2px solid var(--c2);
+  border-radius: 16px;
   padding: 2rem;
-  border-radius: 18px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card h2 {
   margin-top: 0;
-  font-size: 1.6rem;
   color: var(--c4);
+  font-size: 1.5rem;
 }
 
 .card p {
-  font-size: 1rem;
   color: var(--c5);
 }
 
-/* ------------------------------ */
+/* -------------------------------------- */
 /* CAT ICON BUTTON */
-/* ------------------------------ */
+/* -------------------------------------- */
 
 .cat-icon-container {
   text-align: center;
-  padding: 2rem;
-}
-
-.cat-icon-link {
-  display: inline-block;
+  padding: 2rem 0;
 }
 
 .cat-icon {
-  width: 80px;
-  height: 80px;
-  transition: transform 0.3s ease;
+  width: 120px;
+  height: 120px;
+  border: 4px solid var(--c2);
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  box-shadow: var(--shadow-soft);
 }
 
 .cat-icon:hover {
   transform: scale(1.1);
 }
 
-/* ------------------------------ */
-/* NEW PAGE - CAT PHOTO GALLERY */
-/* ------------------------------ */
-
-.flashcards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
-  padding: 3rem;
-}
-
-.cat-photo {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 4px solid var(--c2);
-}
-
-.card {
-  background-color: var(--c1);
-  border: 3px solid var(--c2);
-  padding: 2rem;
-  border-radius: 18px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  text-align: center;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  color: var(--c4);
-}
-
-.card p {
-  font-size: 1rem;
-  color: var(--c5);
-}
-
-/* ------------------------------ */
+/* -------------------------------------- */
 /* FOOTER */
-/* ------------------------------ */
+/* -------------------------------------- */
 
 .footer {
   background-color: var(--c5);
   color: var(--c1);
   text-align: center;
   padding: 1.5rem;
-  margin-top: 2rem;
-
-  /* ------------------------------ */
-/* CAT ICON BUTTON - Box Shape */
-/* ------------------------------ */
-
-.cat-icon-container {
-  text-align: center;
-  padding: 2rem;
-}
-
-.cat-icon-link {
-  display: inline-block;
-}
-
-.cat-icon {
-  width: 120px; /* Set the width of the box */
-  height: 120px; /* Set the height of the box */
-  object-fit: cover; /* Ensures the image fills the box, maintaining aspect ratio */
-  transition: transform 0.3s ease; /* Smooth hover effect */
-  border: 4px solid var(--c2); /* Border color */
-  border-radius: 8px; /* Optional: rounds the corners of the box */
-}
-
-.cat-icon:hover {
-  transform: scale(1.1); /* Slightly enlarges the image when hovered */
-}
-
   font-size: 1.1rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow-soft);
 }
