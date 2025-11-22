@@ -1,155 +1,145 @@
-/* -------------------------------------- */
-/* COLOR PALETTE */
-/* -------------------------------------- */
 :root {
-  --c1: #f7f6f2;
-  --c2: #d4cfc3;
-  --c3: #b5ad9b;
-  --c4: #8a7a62;
-  --c5: #564a38;
-
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-hover: 0 10px 22px rgba(0, 0, 0, 0.18);
+  --c1: #e9e7d8;
+  --c2: #c9c2b0;
+  --c3: #a9a38e;
+  --c4: #8c7a5f;
+  --c5: #5c523d;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: var(--c1);
   color: var(--c5);
-  line-height: 1.6;
 }
 
-/* -------------------------------------- */
 /* HEADER */
-/* -------------------------------------- */
-
 header {
-  background: linear-gradient(to bottom, var(--c2), var(--c3));
-  padding: 2.5rem 1rem;
-  border-bottom: 4px solid var(--c4);
+  background-color: var(--c2);
+  padding: 2rem;
   text-align: center;
-  box-shadow: var(--shadow-soft);
+  border-bottom: 5px solid var(--c3);
 }
 
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
 }
 
 .logo {
-  width: 110px;
-  height: auto;
+  width: 120px;
   border-radius: 50%;
   border: 4px solid var(--c4);
+  background-color: var(--c1);
   padding: 0.5rem;
-  background-color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--c5);
-  letter-spacing: 2px;
-  font-weight: 700;
 }
 
-/* -------------------------------------- */
 /* NAVIGATION */
-/* -------------------------------------- */
-
 nav {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  background-color: var(--c4);
+  gap: 2.5rem;
+  background-color: var(--c3);
   padding: 1rem;
-  box-shadow: var(--shadow-soft);
 }
 
 nav a {
   text-decoration: none;
-  color: var(--c1);
-  font-size: 1.15rem;
-  font-weight: 600;
-  transition: opacity 0.3s;
+  color: var(--c5);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
-  opacity: 0.7;
+  color: var(--c1);
 }
 
-/* -------------------------------------- */
-/* FLASHCARDS */
-/* -------------------------------------- */
-
+/* FLASHCARDS - vertical + bigger */
 .flashcards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
   gap: 2rem;
-  padding: 3rem 2rem;
 }
 
 .card {
-  background-color: white;
-  border: 2px solid var(--c2);
-  border-radius: 16px;
-  padding: 2rem;
+  width: 90%;
+  max-width: 700px;   /* bigger cards */
+  background-color: var(--c1);
+  border: 3px solid var(--c2);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-align: center;
-  box-shadow: var(--shadow-soft);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .card h2 {
-  margin-top: 0;
   color: var(--c4);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .card p {
+  font-size: 1.1rem;
   color: var(--c5);
 }
 
-/* -------------------------------------- */
-/* CAT ICON BUTTON */
-/* -------------------------------------- */
-
+/* CAT ICON - circle */
 .cat-icon-container {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .cat-icon {
-  width: 120px;
-  height: 120px;
-  border: 4px solid var(--c2);
-  border-radius: 12px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
-  transition: transform 0.3s;
-  box-shadow: var(--shadow-soft);
+  border-radius: 50%;   /* circular */
+  border: 4px solid var(--c2);
+  transition: transform 0.3s ease;
 }
 
 .cat-icon:hover {
   transform: scale(1.1);
 }
 
-/* -------------------------------------- */
-/* FOOTER */
-/* -------------------------------------- */
+/* BACK TO TOP BUTTON */
+.back-to-top {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  background-color: var(--c4);
+  color: var(--c1);
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
 
+.back-to-top:hover {
+  transform: scale(1.15);
+}
+
+/* FOOTER */
 .footer {
   background-color: var(--c5);
   color: var(--c1);
   text-align: center;
   padding: 1.5rem;
-  font-size: 1.1rem;
   margin-top: 2rem;
-  box-shadow: var(--shadow-soft);
 }
